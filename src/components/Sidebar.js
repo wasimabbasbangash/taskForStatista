@@ -8,6 +8,7 @@ import { BiGridAlt } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import SidebarMenu from "./sidebarMenu";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar({ children }) {
   const routes = [
@@ -39,6 +40,13 @@ function Sidebar({ children }) {
   ];
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  // reroute to the main page.
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/`;
+    navigate(path);
+  };
 
   const showAnimation = {
     hidden: {
@@ -82,6 +90,7 @@ function Sidebar({ children }) {
                     animate='show'
                     exit='hidden'
                     className='flex mx-auto text-3xl'
+                    onClick={routeChange}
                   >
                     ReQiew
                   </motion.h1>
