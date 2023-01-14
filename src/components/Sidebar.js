@@ -89,7 +89,7 @@ function Sidebar({ children }) {
                     initial='hidden'
                     animate='show'
                     exit='hidden'
-                    className='flex mx-auto text-3xl'
+                    className='flex mx-auto text-3xl hover:cursor-pointer'
                     onClick={routeChange}
                   >
                     ReQiew

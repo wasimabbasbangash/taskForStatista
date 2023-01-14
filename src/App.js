@@ -7,7 +7,7 @@ import DriverAnalysis from "./pages/DriverAnalysis";
 import TimeSeries from "./pages/TimeSeries";
 import AspectAnalysis from "./pages/AspectDetails";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import AspectDetails from "./pages/AspectDetails";
 
 function App() {
