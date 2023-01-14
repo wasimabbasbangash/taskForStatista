@@ -5,8 +5,10 @@ import AspectScores from "./pages/AspectScores";
 import BenchMark from "./pages/BenchMark";
 import DriverAnalysis from "./pages/DriverAnalysis";
 import TimeSeries from "./pages/TimeSeries";
+import AspectAnalysis from "./pages/AspectDetails";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AspectDetails from "./pages/AspectDetails";
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
             </Route>
             <Route path='/driver-analysis' element={<DriverAnalysis />}>
               Driver Analysis
+            </Route>
+            <Route path='/aspect-details' element={<AspectDetails />}>
+              Aspect Analysis
             </Route>
           </Routes>
         </Sidebar>
