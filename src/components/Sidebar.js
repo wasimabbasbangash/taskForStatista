@@ -59,7 +59,7 @@ function Sidebar({ children }) {
 
   return (
     <>
-      <div className='flex flex-row space-x-8  w-full'>
+      <div className='flex flex-row  w-full'>
         <div className='bg-black text-white h-[100%]'>
           <motion.div
             animate={{
@@ -146,7 +146,7 @@ function Sidebar({ children }) {
             </section>
           </motion.div>
         </div>
-        <main className='w-screen  overflow-y-scroll ml-4'>{children}</main>
+        <main className='w-screen  overflow-y-scroll'>{children}</main>
       </div>
     </>
   );

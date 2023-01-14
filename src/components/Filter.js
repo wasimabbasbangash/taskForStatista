@@ -84,8 +84,8 @@ function Filter({ filterSelect, showWholeFilter }) {
   };
 
   return (
-    <div className='flex max-[786px]:flex-col gap-x-8 max-[786px]:p-8 justify-evenly items-center max-[786px]:w-full bg-white shadow-md min-[787px]:items-start min-[787px]:gap-x-4 flex-wrap min-[787px]:gap-y-1 min-[787px]:justify-start min-[787px]:items-start'>
-      <div className='flex flex-col justify-start mt-2 items-start max-[786px]:w-[60%] min-[787px]:w-[30%]'>
+    <div className='flex max-[786px]:flex-col pl-8  pb-2 gap-x-8 max-[786px]:p-8 justify-evenly items-center max-[786px]:w-full bg-white shadow-md min-[787px]:items-start min-[787px]:gap-x-4 flex-wrap min-[787px]:gap-y-1 min-[787px]:justify-start min-[787px]:items-start'>
+      <div className='flex flex-col justify-start mt-2 items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[1441px]:w-[15%] '>
         <label className='px-4 text-xs'> Device type</label>
         <Dropdown
           name='device-dropdown'
@@ -97,7 +97,7 @@ function Filter({ filterSelect, showWholeFilter }) {
         ></Dropdown>
       </div>
       {/* brand dropdown */}
-      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%]'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[1441px]:w-[15%] '>
         <label className=' text-xs w-full px-4 flex flex-row  items-center justify-start space-x-2'>
           <div>Brand</div> {showWholeFilter && <AiOutlineArrowLeft />}
         </label>
@@ -128,7 +128,7 @@ function Filter({ filterSelect, showWholeFilter }) {
         )}
       </div>
       {/* second brand */}
-      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] '>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[1441px]:w-[15%]'>
         {!showWholeFilter && (
           <>
             <label className=' w-full text-xs flex flex-row  px-4 items-center justify-start space-x-2'>
@@ -175,7 +175,7 @@ function Filter({ filterSelect, showWholeFilter }) {
           </>
         )}
       </div>
-      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%]'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[1441px]:w-[15%] '>
         <div
           date-rangepicker
           className='flex w-[100%] flex-col jusitfy-start items-center'
@@ -193,7 +193,7 @@ function Filter({ filterSelect, showWholeFilter }) {
           />
         </div>
       </div>
-      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[787px]:pt-[1rem]'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[787px]:pt-[1rem] min-[1441px]:w-[15%]'>
         {/* <div
           date-rangepicker
           className='flex w-[100%] flex-col jusitfy-start items-center'
@@ -205,7 +205,7 @@ function Filter({ filterSelect, showWholeFilter }) {
         ></Sllider>
         {/* </div> */}
       </div>
-      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[787px]:mt-3'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[787px]:mt-3 min-[1441px]:w-[15%]'>
         <label className='w-full px-4 flex flex-row text-xs items-center justify-start space-x-2 max-[786px]:invisible'>
           Clear filter
         </label>
