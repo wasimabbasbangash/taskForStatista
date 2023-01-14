@@ -18,10 +18,12 @@ function BenchMark() {
   const showCard = selectedBrand();
   console.log(showCard);
 
-  // update brand state from filter dropdown
-  const changeFilter = async (brand1, brand2) => {
-    setBrand1(brand1);
-    setBrand2(brand2);
+  // receive value from  filter onchange
+  const changeFilter = (brand1, brand2) => {
+    let newBrand1 = brand1;
+    let newBrand2 = brand2;
+    setBrand1(newBrand1);
+    setBrand2(newBrand2);
   };
 
   console.log(brand1);

@@ -11,8 +11,8 @@ export const data = {
       {
         label: "Brand 1",
         data: [2, 9, 3, 5, 2],
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "rgba(0, 74, 245, 0.62)",
+        borderColor: "rgba(0, 74, 245, 1)",
         borderWidth: 1,
       },
     ],
@@ -23,8 +23,8 @@ export const data = {
       {
         label: "Brand 2",
         data: [6, 3, 7, 5, 8],
-        backgroundColor: "rgba(170, 255, 10,0.2)",
-        borderColor: "RGB(170, 255, 10)",
+        backgroundColor: "rgba(211, 16, 16, 0.58)",
+        borderColor: "rgba(211, 16, 16, 1)",
         borderWidth: 1,
       },
     ],
@@ -35,8 +35,8 @@ export const data = {
       {
         label: "Brand 3",
         data: [6, 3, 7, 5, 8],
-        backgroundColor: "rgba(100, 255, 132, 0.2)",
-        borderColor: "rgba(100, 255, 132, 1)",
+        backgroundColor: "rgba(13, 254, 0, 0.49)",
+        borderColor: "rgba(0, 245, 38, 1)",
         borderWidth: 1,
       },
     ],
