@@ -1,5 +1,6 @@
 import React from "react";
 import { Radar } from "react-chartjs-2";
+import "chart.js/auto";
 
 // const data = ["Cleaning", "Service", "Safety", "Quality", "Food taste"];
 

@@ -21,11 +21,11 @@ function Dropdown({
   };
 
   return (
-    <div className='relative inline-block text-left text-xs md:w-40 z-100 bg-white w-[100%]'>
+    <div className='relative inline-block text-left text-xs z-100 bg-transparent w-[100%]'>
       <div>
         <button
           type='button'
-          className='inline-flex  text-xs md:text-sm w-full justify-between rounded-md border-[2px] border-gray-300 bg-white px-4 md:py-2 font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'
+          className='inline-flex py-px w-full justify-between items-center rounded-md border-[2px] border-gray-300 bg-white px-4  font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'
           id='menu-button'
           aria-expanded='true'
           aria-haspopup='true'

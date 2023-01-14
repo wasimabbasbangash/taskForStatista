@@ -39,22 +39,6 @@ function Sidebar({ children }) {
   ];
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const inputAnimation = {
-    hidden: {
-      width: 0,
-      padding: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    show: {
-      width: "140px",
-      padding: "5px 15px",
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
 
   const showAnimation = {
     hidden: {
@@ -75,8 +59,8 @@ function Sidebar({ children }) {
 
   return (
     <>
-      <div className='flex flex-row space-x-8'>
-        <div className='bg-black text-white h-[100%] overflow-y-auto  sticky top-0  z-50'>
+      <div className='flex flex-row space-x-8  w-full'>
+        <div className='bg-black text-white h-[100%]'>
           <motion.div
             animate={{
               width: isOpen ? "200px" : "45px",
@@ -162,7 +146,7 @@ function Sidebar({ children }) {
             </section>
           </motion.div>
         </div>
-        <main className='w-screen ml-0'>{children}</main>
+        <main className='w-screen  overflow-y-scroll ml-4'>{children}</main>
       </div>
     </>
   );

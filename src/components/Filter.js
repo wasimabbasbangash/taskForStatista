@@ -80,12 +80,13 @@ function Filter({ filterSelect, showWholeFilter }) {
     setStartDate();
     setEndDate();
     setSliderValue([20, 100]);
+    filterSelect(brandValue, secondBrandValue);
   };
 
   return (
-    <div className='flex xs:justify-start xs:px-0 sm:px-0 xs:items-center  sm:justify-start sm:items-center text-sm md:flex-row flex-col sm:h-fit md:h-fit w-full min-w-fit  space-x-8 items-start p-8 bg-white shadow-md '>
-      <div className='flex flex-col justify-start items-start'>
-        <label className='px-4'> Device type</label>
+    <div className='flex max-[786px]:flex-col gap-x-8 max-[786px]:p-8 justify-evenly items-center max-[786px]:w-full bg-white shadow-md min-[787px]:items-start min-[787px]:gap-x-4 flex-wrap min-[787px]:gap-y-1 min-[787px]:justify-start min-[787px]:items-start'>
+      <div className='flex flex-col justify-start mt-2 items-start max-[786px]:w-[60%] min-[787px]:w-[30%]'>
+        <label className='px-4 text-xs'> Device type</label>
         <Dropdown
           name='device-dropdown'
           changeValue={changeDevice}
@@ -96,11 +97,12 @@ function Filter({ filterSelect, showWholeFilter }) {
         ></Dropdown>
       </div>
       {/* brand dropdown */}
-      <div className='flex flex-col justify-start items-start'>
-        <label className=' w-full px-4 flex flex-row  items-center justify-start space-x-2'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%]'>
+        <label className=' text-xs w-full px-4 flex flex-row  items-center justify-start space-x-2'>
           <div>Brand</div> {showWholeFilter && <AiOutlineArrowLeft />}
         </label>
         <Dropdown
+          className='bg-[##E5E8E8]'
           name='brand-dropdown'
           changeValue={changeBrand}
           openedDropdown={openDropdownName}
@@ -111,7 +113,7 @@ function Filter({ filterSelect, showWholeFilter }) {
         {/* model */}
         {showWholeFilter && (
           <>
-            <label className=' w-full flex flex-row  px-4 items-center justify-start space-x-2'>
+            <label className=' w-full text-xs flex flex-row  px-4 items-center justify-start space-x-2'>
               <div>Model </div>
             </label>
             <Dropdown
@@ -126,10 +128,10 @@ function Filter({ filterSelect, showWholeFilter }) {
         )}
       </div>
       {/* second brand */}
-      <div className='flex flex-col  justify-start items-start'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] '>
         {!showWholeFilter && (
           <>
-            <label className=' w-full flex flex-row  px-4 items-center justify-start space-x-2'>
+            <label className=' w-full text-xs flex flex-row  px-4 items-center justify-start space-x-2'>
               <div>Model </div>
             </label>
             <Dropdown
@@ -144,7 +146,7 @@ function Filter({ filterSelect, showWholeFilter }) {
         )}
         {showWholeFilter && (
           <>
-            <label className=' w-full flex flex-row  px-4 items-center justify-start space-x-2'>
+            <label className=' w-full text-xs flex flex-row  px-4 items-center justify-start space-x-2'>
               <div>Brand </div>
               <AiOutlineArrowRight />
             </label>
@@ -159,7 +161,7 @@ function Filter({ filterSelect, showWholeFilter }) {
 
             {/* model */}
 
-            <label className=' w-full flex flex-row  px-4 items-center justify-start space-x-2'>
+            <label className=' w-full text-xs flex flex-row  px-4 items-center justify-start space-x-2'>
               <div>Model </div>
             </label>
             <Dropdown
@@ -173,14 +175,16 @@ function Filter({ filterSelect, showWholeFilter }) {
           </>
         )}
       </div>
-      <div className='flex flex-col  justify-start items-start'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%]'>
         <div
           date-rangepicker
-          className='flex  flex-col jusitfy-start items-center'
+          className='flex w-[100%] flex-col jusitfy-start items-center'
         >
-          <label className='text-black w-full '>Date</label>
+          <label className='w-full px-4 flex flex-row text-xs items-center justify-start space-x-2 '>
+            Date
+          </label>
           <DatePicker
-            className='text-sm border-[2px] border-gray-300 border-spacing-2 shadow-sm p-2 rounded-md'
+            className='text-xs border-[2px] border-gray-300 border-spacing-2 shadow-sm px-2 py-1 rounded-md w-full'
             selectsRange={true}
             startDate={startDate}
             endDate={endDate}
@@ -189,17 +193,26 @@ function Filter({ filterSelect, showWholeFilter }) {
           />
         </div>
       </div>
-      <div className='flex flex-col  justify-start items-start'>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[787px]:pt-[1rem]'>
+        {/* <div
+          date-rangepicker
+          className='flex w-[100%] flex-col jusitfy-start items-center'
+        >
+          <label className='w-full px-4 flex flex-row text-xs items-center justify-start space-x-2 '></label> */}
         <Sllider
           handleSliderChange={handleSliderChange}
           value={sliderValue}
         ></Sllider>
+        {/* </div> */}
       </div>
-      <div className='flex flex-col  justify-start items-start'>
-        <label className='text-black'>Clear filter</label>
+      <div className='flex flex-col mt-2 justify-start items-start max-[786px]:w-[60%] min-[787px]:w-[30%] min-[787px]:mt-3'>
+        <label className='w-full px-4 flex flex-row text-xs items-center justify-start space-x-2 max-[786px]:invisible'>
+          Clear filter
+        </label>
         <button
           onClick={onClearFilterhandler}
-          className='relative bg-white inline-block md:w-40 w-[100%] border-gray-300 border-[2px] text-center py-[7px] rounded-md hover:scale-105'
+          className='relative bg-black text-xs text-white inline-block w-full  border-black border-[2px] text-center py-1 rounded-md hover:scale-105
+          transition ease-in-out delay-150  hover:text-black hover:bg-white hover:border-black duration-300'
         >
           CLEAR
         </button>

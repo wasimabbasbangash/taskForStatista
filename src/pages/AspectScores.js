@@ -30,11 +30,8 @@ function AspectScores() {
   const [brand1, setBrand1] = useState("Select brand");
   const selectedBrand = dataMap.get(brand1);
   console.log(selectedBrand);
-  // const [brand2, setBrand2] = useState("Select brand");
-  // dummy data fro aspect scores
   const labels = ["Cleaning", "Service", "Safety", "Quality", "Food taste"];
 
-  const showCard = brand1 === "Select Brand" ? false : true;
   const changeFilter = (brand1, brand2) => {
     setBrand1(brand1);
   };
@@ -47,12 +44,12 @@ function AspectScores() {
         <Filter filterSelect={changeFilter} showWholeFilter={false}></Filter>
         {/* </div> */}
         {/* title */}
-        {showCard && (
+        {selectedBrand && (
           <>
             <div className=' text-center  w-full  text-2xl text-black '>
               Aspect-based sentiment: BBQ
             </div>
-            <div className='flex flex-wrap flex-row justify-start gap-x-8 bg-white  '>
+            <div className='flex max-[768px]:flex-col flex-wrap flex-row justify-evenly gap-x-8 bg-white  '>
               <div className='flex flex-col gap-y-8 m-8 items-center justify-start shadow-md p-4 rounded-xl'>
                 <div className='w-full bg-teal-50 h-fit flex flex-col px-8  py-6 mx-4 pb-2 rounded-lg'>
                   <h1 className='text-xl font-semibold tracking-tight text-gray-900 dark:text-white'>
@@ -63,23 +60,28 @@ function AspectScores() {
                     Edit Subscription
                   </h1>
                 </div>
-                <ReviewCard brand={brand1}></ReviewCard>
+                <ReviewCard className='w-full' brand={brand1}></ReviewCard>
               </div>
-              <div className='grid grid-cols-2  my-8 gap-2  overflow-x-clip shadow-md  rounded-xl mr-4 p-4'>
+              <div className='grid grid-cols-2 grow my-8 gap-2  overflow-x-clip shadow-md  rounded-xl mr-4 p-4'>
                 {labels.map((label, index) => (
                   <div
-                    className={`flex flex-col py-4 px-8 rounded-md ${
+                    className={`flex flex-col justify-between py-4 px-6 rounded-md ${
                       selectedBrand.trend[index] === "upward"
-                        ? "bg-lime-200"
-                        : "bg-orange-100"
+                        ? "bg-green-100"
+                        : "bg-orange-50"
                     }`}
                   >
-                    <h1 className='text-xl font-semibold text-slate-400'>
-                      {label}
-                    </h1>
-                    <p className='text-xs text-slate-400'> Score out of 100</p>
+                    <div>
+                      <h1 className='text-xl font-semibold text-slate-900'>
+                        {label}
+                      </h1>
+                      <p className='text-xs text-slate-400'>
+                        {" "}
+                        Score out of 100
+                      </p>
+                    </div>
                     <div className='flex flex-row  mt-4 w-full justify-between items-center'>
-                      <h1 className='text-xl font-semibold text-slate-700'>
+                      <h1 className='text-xl font-semibold text-slate-900'>
                         {selectedBrand.percentage[index]}%
                       </h1>
                       {selectedBrand.trend[index] === "upward" ? (

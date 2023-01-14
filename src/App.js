@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className='App bg-white h-screen flex flex-row justify-start overflow-y-scroll overflow-x-hidden'>
+    <div className='App bg-white h-screen  flex flex-row justify-start overflow-y-scroll overflow-x-clip flex-wrap relative'>
       <Router>
         <Sidebar>
           <Routes>

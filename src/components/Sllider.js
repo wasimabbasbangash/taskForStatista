@@ -7,12 +7,12 @@ function Sllider({ handleSliderChange, value }) {
     return `${value}`;
   }
   return (
-    <div className='relative flex flex-col  py-4 justify-start items-center text-left md:w-40 w-[100%]'>
-      <div className='flex flex-row w-full justify-between stretch space-x-4 p-2'>
-        <div className='  border-[2px] w-[50%] border-gray-300 rounded-md bg-white px-4 py-2 text-sm font-medium'>
+    <div className='relative flex flex-col text-xs py-px justify-between  space-x-2 items-center text-left w-full'>
+      <div className='flex flex-row w-full gap-x-2 gap-y-2 justify-between stretch'>
+        <div className='  inline-flex py-1 w-full justify-between rounded-md border-[2px]  border-gray-300 bg-white px-4  font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
           {value[0]}
         </div>
-        <div className='  border-[2px] w-[50%] border-gray-300 bg-white  rounded-md px-4 py-2 text-sm font-medium'>
+        <div className='  inline-flex py-px w-full justify-between rounded-md border-[2px] border-gray-300 bg-white px-4  font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
           {value[1]}
         </div>
       </div>
