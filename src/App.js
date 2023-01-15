@@ -5,15 +5,14 @@ import AspectScores from "./pages/AspectScores";
 import BenchMark from "./pages/BenchMark";
 import DriverAnalysis from "./pages/DriverAnalysis";
 import TimeSeries from "./pages/TimeSeries";
-import AspectAnalysis from "./pages/AspectDetails";
-
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import AspectDetails from "./pages/AspectDetails";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className='App bg-white h-screen  flex flex-row justify-start overflow-y-scroll overflow-x-clip flex-wrap relative'>
-      <Router>
+      <BrowserRouter>
         <Sidebar>
           <Routes>
             <Route path='/' element={<AspectScores />}>
@@ -33,7 +32,7 @@ function App() {
             </Route>
           </Routes>
         </Sidebar>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

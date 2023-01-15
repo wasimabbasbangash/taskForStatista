@@ -65,6 +65,7 @@ function AspectScores() {
               <div className='grid grid-cols-2 grow my-8 gap-2  overflow-x-clip shadow-md  rounded-xl mr-4 p-4'>
                 {labels.map((label, index) => (
                   <div
+                    key={index}
                     className={`flex flex-col justify-between py-4 px-6 rounded-md ${
                       selectedBrand.trend[index] === "upward"
                         ? "bg-green-100"
